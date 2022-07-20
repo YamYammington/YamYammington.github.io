@@ -37,6 +37,18 @@ body {
   margin-bottom: 0;
 }
 
+@media (max-width: 840px) {
+  .header-text {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 540px) {
+  .header-text {
+    font-size: 40px;
+  }
+}
+
 .section-header {
   font-size: 48px;
   font-weight: bold;
@@ -123,17 +135,6 @@ body {
   background: rgba(128, 0, 0, 0.7);
 }
 
-.about-section {
-  height: 100%;
-  text-align: center;
-  margin-left: 25%;
-  margin-right: 25%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .contact {
   display: flex;
   flex-direction: row;
@@ -206,5 +207,38 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+
+.about-section {
+  height: 100%;
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .about-section {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about-section {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .about-section {
+    margin-left: 2%;
+    margin-right: 2%;
   }
 }
