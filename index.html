@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yam Yammington</title>
+    <link href="static/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="static/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <script type="text/javascript">
+        function scroll_to_section_1() {
+            document.getElementById("about").scrollIntoView({block:"end",behavior:"smooth"});
+        }
+        function copy_email_to_clipboard() {
+            if (!confirm("Copy E-Mail to clipboard?")) {
+                return;
+            }
+            navigator.clipboard.writeText("yammington.dev@gmail.com");
+        }
+        function copy_discord_to_clipboard() {
+            if (!confirm("Copy Discord info to clipboard?")) {
+                return;
+            }
+            navigator.clipboard.writeText("Yam#1297");
+        }
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+    </script>
+</head>
+<body>
+    <header style="height:100vh;">
+        <div class="yambg-background">
+            <div class="header-positioning">
+                <h1 class="header-text">YAM&nbsp;YAMMINGTON</h1>
+                <h2>Demo Site</h2>
+                <a onclick='scroll_to_section_1()' style="cursor:pointer">
+                    <div class="opaque" style="display: inline-block;">
+                        <p style="margin:0;margin-bottom:2px;">Learn More</p>
+                        <span style="font-size:32px;" class="material-symbols-outlined">expand_circle_down</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div style="height:100vh">
+        <div class="yam-background reveal fade-img">
+            <section id="about" class="about-section">
+                <div class="opaque-text-bg reveal fade-text">
+                    <h1 class="section-header">Welcome</h1>
+                    <p>I am Yam Yammington. I make things in Python, HTML, CSS and JS as a hobby, in my spare time.</p>
+                    <p class="paragraph">I made this site to briefly demonstrate my abilities with front-end languages. If you would like to know more about my abilities in back-end development, I would suggest you have a look at my <a class="link" href="https://github.com/YamYammington/minor-projects" target="_blank">minor-projects repository on GitHub</a>.</p>
+                    <p class="paragraph">Should you want to contact me, my contact details are at the bottom of the screen. I reply the fastest on Discord.</p>
+                    <br><p class="small-text">And before you freak out, that thing in the background is a yam, the one seen in my GitHub profile picture.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="bottom justify-center opaque-background">
+        <div class="contact">
+            <div class="tooltip">
+                <a class="link" href="mailto:yammington.dev@gmail.com" target="_blank">E-Mail</a>
+                <a class="tooltiptext" onclick="copy_email_to_clipboard()" style="color:red">Copy to clipboard</a>
+            </div>
+            &nbsp;&#x2022;&nbsp;
+            <a class="link" href="https://github.com/YamYammington" target="_blank">GitHub</a>
+            &nbsp;&#x2022;&nbsp;
+            <div class="tooltip">
+                <span class="link" onclick="copy_discord_to_clipboard()">Yam#1279 on Discord</span>
+                <a class="tooltiptext" onclick="copy_to_clipboard()" style="color:red">Copy to clipboard</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,211 @@
+/* a lot of this is not necessary, this whole file is copy-pasted from one of my private repositories */
+
+/* mandatory */
+@font-face {
+  font-family: "Quicksand";
+  src: url(fonts/Quicksand-Medium.ttf) format("truetype");
+}
+
+* {
+  font-family: Quicksand, sans-serif;
+  color: #FFFFFF;
+}
+
+body {
+  background-color: #000000;
+  overflow-x:hidden;
+  margin: 0;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #660000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cc0000;
+}
+
+.header-text {
+  font-size: 94px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.section-header {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s ease;
+  border-bottom: 2px solid #FFFFFF;
+  cursor: pointer;
+}
+
+.link:hover {
+  border-bottom: 2px solid #FF0000;
+}
+
+.yambg-background {
+  background-color: #000000;
+  height: 100vh;
+  background: url(img/yambg.webp) right;
+  overflow: hidden;
+}
+
+.yam-background {
+  background-color: #000000;
+  height: 100vh;
+  background: url(img/yam.webp) top;
+  overflow: hidden;
+}
+
+.header-positioning {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.bottom {
+  position: fixed;
+  bottom:0;
+  width:100%;
+}
+
+.small-text {
+  font-size: 16px;
+  margin:10px;
+}
+
+.paragraph {
+  margin:10px;
+}
+
+.opaque-background {
+  background: rgba(0, 0, 0, 0.7);
+  padding-top: 5px;
+  border-radius: 10px;
+}
+
+.opaque-text-bg {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.opaque {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 16px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.opaque:hover {
+  background: rgba(128, 0, 0, 0.7);
+}
+
+.about-section {
+  height: 100%;
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  bottom: 5px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 50%;
+  transition: opacity 0.3s;
+  position: absolute;
+  z-index: 1;
+}
+.tooltiptext {background-color: red;cursor:pointer}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+.reveal.active {
+  opacity: 1;
+}
+
+.active.fade-text {
+  animation: fade-text 0.8s ease-out;
+}
+.active.fade-img {
+  animation: fade-img 1.2s;
+}
+
+@keyframes fade-text {
+  0% {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-img {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
