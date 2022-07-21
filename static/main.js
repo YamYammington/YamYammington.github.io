@@ -1,18 +1,12 @@
-function scroll_to_section_1() {
-    document.getElementById("about").scrollIntoView({block:"end",behavior:"smooth"});
-}
-function copy_email_to_clipboard() {
-    if (!confirm("Copy E-Mail to clipboard?")) {
-        return;
-    }
-    navigator.clipboard.writeText("yammington.dev@gmail.com");
+function scroll_to(element_id) {
+    document.getElementById(element_id).scrollIntoView({block:"end",behavior:"smooth"});
 }
 
-function copy_discord_to_clipboard() {
-    if (!confirm("Copy Discord info to clipboard?")) {
+function copy_to_clipboard(text) {
+    if (!confirm(`Copy ${text} to clipboard?`)) {
         return;
     }
-    navigator.clipboard.writeText("Yam#1297");
+    navigator.clipboard.writeText(text);
 }
 
 function reveal() {

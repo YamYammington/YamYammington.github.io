@@ -137,8 +137,15 @@ body {
   border-radius: 10px;
   transition: 0.3s;
 }
+
 .opaque:hover {
   background: rgba(128, 0, 0, 0.7);
+}
+
+.scroller-text {
+  font-size: 1em;
+  margin: 0;
+  margin-bottom: 2px;
 }
 
 .contact {
@@ -157,20 +164,26 @@ body {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 200px;
+  width: 150px;
   bottom: 100%;
   left: 50%;
-  margin-left: -100px;
+  margin-left: -75px;
   background-color: black;
+  border: 1px solid #FF0000;
   color: #fff;
   text-align: center;
-  padding: 5px 0;
+  padding: 5px 5px;
   border-radius: 5px;
   transition: opacity 0.3s;
   position: absolute;
   z-index: 1;
 }
-.tooltiptext {background-color: red;cursor:pointer}
+
+.tooltiptext {
+  color: red;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
@@ -246,4 +259,46 @@ body {
     margin-left: 2%;
     margin-right: 2%;
   }
+}
+
+.contact-footer {
+  height:20vh;
+  width:100%;
+}
+
+.links {
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-flow:column wrap;
+}
+
+.contact-image {
+  text-decoration: none;
+  width: 30px;
+  filter: invert(100%);
+  transition: 1s ease;
+  cursor: pointer;
+}
+
+.contact-image:hover {
+  filter: invert(17%) sepia(31%) saturate(7491%) hue-rotate(350deg) brightness(117%) contrast(137%);
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.section-height {
+  height: 100vh;
+}
+
+.no-line {
+  text-decoration: none;
 }
